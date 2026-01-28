@@ -1,0 +1,3 @@
+services:
+  volunteering_app:
+    build: .
