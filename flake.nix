@@ -64,12 +64,16 @@
             venvVersionWarn
           '';
 
-          packages = with python.pkgs; [
-            venvShellHook
-            pip
-            ruff
-            django
-          ];
+          packages =
+            [
+              pkgs.nodejs_25
+            ]
+            ++ (with python.pkgs; [
+              venvShellHook
+              pip
+              ruff
+              django
+            ]);
         };
       }
     );
