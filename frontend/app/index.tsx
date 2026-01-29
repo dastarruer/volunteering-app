@@ -7,6 +7,7 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "#dad7cd",
       }}
     >
       <Text>hello world</Text>
