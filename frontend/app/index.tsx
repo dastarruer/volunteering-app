@@ -1,16 +1,26 @@
-import { Text, View } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
+import BottomNav from "../components/BottomNav";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#dad7cd",
-      }}
-    >
-      <Text>hello world</Text>
+    <View style={styles.container}>
+
+      <ScrollView style={styles.content}>
+      </ScrollView>
+
+      <BottomNav />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#dad7cd",
+  },
+  content: {
+    flex: 1, // This takes up all available space
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
