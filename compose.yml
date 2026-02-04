@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: db
+    environment:
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "123"
+      POSTGRES_DB: "db"
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - pg_data:/var/lib/postgresql
+
+  # https://oneuptime.com/blog/post/2026-01-25-run-django-migrations-docker-compose/view
+  migrate:
+    build: .
+    command: python manage.py migrate --noinput
+    environment:
+      DATABASE_URL: postgres://user:123@db:5432/db
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    develop:
+      watch:
+        - action: sync
+          path: ./volunteering_app
+          target: /app
+          initial_sync: true
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      db:
+        condition: service_healthy
+
+volumes:
+  pg_data:
