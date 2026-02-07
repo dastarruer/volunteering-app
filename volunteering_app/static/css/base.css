@@ -1,0 +1,35 @@
+/* Hardcoded Viewport for iPhone 15 Pro (393px x 852px) */
+html {
+    background-color: #121212; /* Dark background outside the app */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    /* Hardcoded Dimensions */
+    width: 393px;
+    height: 852px;
+
+    /* Screen Behavior */
+    background-color: #dad7cd;
+    overflow: hidden; /* Prevent the desktop browser from scrolling */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    /* Prototype Aesthetics */
+    border-radius: 48px;
+    border: 12px solid #222; /* iPhone bezel */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Scrollable content area inside the hardcoded screen */
+main {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+}
