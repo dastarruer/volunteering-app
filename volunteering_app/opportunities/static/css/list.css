@@ -1,3 +1,10 @@
+/* Remove default styling for ul elements */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .khula-semibold {
   font-family: "Khula", sans-serif;
   font-weight: 600;
@@ -11,18 +18,31 @@
   font-style: normal;
 }
 
-.title {
-  font-size: 13pt;
+.opportunity {
+  background-color: #588157;
+  color: #dad7cd;
+  border-radius: 25px;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.description {
-  font-size: 7pt;
+.title {
+  font-size: 13pt;
+
+  margin-top: -6px;
+  margin-bottom: -3px;
 }
 
 .num-volunteers {
   font-size: 7pt;
+  margin-bottom: -10px;
 }
 
 .distance {
+  font-size: 7pt;
+}
+
+.description {
   font-size: 7pt;
 }
