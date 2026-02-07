@@ -1,10 +1,6 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <h2>Available Opportunities</h2>
     <ul>
-        {% for opp in opportunities %}
-            <li>{{ opp.title }}</li>
-        {% endfor %}
+        {% for opp in opportunities %}<li>{{ opp.title }}</li>{% endfor %}
     </ul>
 {% endblock content %}
