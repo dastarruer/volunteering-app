@@ -1,0 +1,28 @@
+.khula-semibold {
+  font-family: "Khula", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.title {
+  font-size: 13pt;
+}
+
+.description {
+  font-size: 7pt;
+}
+
+.num-volunteers {
+  font-size: 7pt;
+}
+
+.distance {
+  font-size: 7pt;
+}
