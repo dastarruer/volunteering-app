@@ -9,10 +9,14 @@
         <meta name="keywords"
               content="volunteering, charity, community service, help, local events">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block stylesheet %}
+        {% endblock stylesheet %}
         <title>
             {% block title %}
             {% endblock title %}
         </title>
+        {% block fonts %}
+        {% endblock fonts %}
     </head>
     <body>
         <main>

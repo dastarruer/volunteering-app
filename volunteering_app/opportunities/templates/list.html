@@ -1,6 +1,38 @@
 {% extends "base.html" %}
+{% load static %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/list.css' %}">
+{% endblock stylesheet %}
+{% block fonts %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap"
+          rel="stylesheet">
+{% endblock fonts %}
 {% block content %}
     <ul>
-        {% for opp in opportunities %}<li>{{ opp.title }}</li>{% endfor %}
+        {% for opportunity in opportunities %}
+            <li>
+                <div class="opportunity">
+                    <div class="opportunity-image">
+                        <img src="{{ opportunity.image.url }}"
+                             alt="{{ opportunity.title }}"
+                             width="167"
+                             height="111"
+                             class="opportunity-img">
+                    </div>
+                    <div class="opportunity-info">
+                        <h2 class="title montserrat-bold">{{ opportunity.title }}</h2>
+                        <h3 class="num-volunteers khula-semibold">
+                            {{ opportunity.numSignedVolunteers }}/{{ opportunity.numTotalVolunteers }} people have signed up
+                        </h3>
+                        <h3 class="distance khula-semibold">{{ opportunity.distanceFromUserKilometers }}km from you</h3>
+                        <p class="description khula-semibold">{{ opportunity.description }}</p>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
     </ul>
 {% endblock content %}

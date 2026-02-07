@@ -1,0 +1,68 @@
+/* Remove default styling for ul elements */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.khula-semibold {
+  font-family: "Khula", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.opportunity {
+  display: flex; /* This puts children side-by-side */
+  flex-direction: row-reverse; /* Ensures they go left-to-right */
+  align-items: center; /* Vertically centers the text against the image */
+  gap: 15px;
+
+  background-color: #588157;
+  color: #dad7cd;
+  border-radius: 25px;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.opportunity-image {
+  flex-shrink: 0; /* Prevents the image from shrinking if text is long */
+}
+
+.opportunity-img {
+  object-fit: cover; /* Crops the image to fit the dimensions without stretching */
+  border-radius: 10px;
+  border: 5px solid #588157;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.opportunity-info {
+  flex-grow: 1; /* Allows the text area to take up the remaining space */
+}
+
+.title {
+  font-size: 13pt;
+
+  margin-top: -6px;
+  margin-bottom: -3px;
+}
+
+.num-volunteers {
+  font-size: 7pt;
+  margin-bottom: -10px;
+}
+
+.distance {
+  font-size: 7pt;
+}
+
+.description {
+  font-size: 7pt;
+}

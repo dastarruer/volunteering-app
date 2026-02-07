@@ -41,6 +41,9 @@ services:
         condition: service_completed_successfully
       db:
         condition: service_healthy
+    volumes:
+      - media_data:/app/media
 
 volumes:
   pg_data:
+  media_data:
