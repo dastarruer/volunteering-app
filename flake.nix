@@ -69,6 +69,7 @@
             pip
             ruff
             django
+            pillow
             pkgs.djlint
             psycopg2
           ];

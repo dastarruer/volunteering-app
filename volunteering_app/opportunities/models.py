@@ -5,6 +5,7 @@ from django.db import models
 class Opportunity(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=1000)
+    image = models.ImageField(upload_to="opportunities/", null=True, blank=True)
     numTotalVolunteers = models.IntegerField()
     numSignedVolunteers = models.IntegerField()
 
