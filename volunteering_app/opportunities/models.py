@@ -13,3 +13,7 @@ class Opportunity(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        # Without this, the admin panel will show 'Opportunitys'
+        verbose_name_plural = "Opportunities"
