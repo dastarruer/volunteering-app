@@ -59,6 +59,23 @@ main {
     font-size: 12px;
 }
 
+/* The underline below an active icon */
+.active-indicator {
+    width: 0;
+    height: 3px;
+    background-color: #DAD7CD; /* Matching your light beige theme */
+    border-radius: 10px;
+    position: absolute;
+    bottom: 8px; /* Position it slightly below the icon */
+    transition: width 0.3s ease; /* Smooth growing effect */
+}
+
+/* Only show the indicator when the 'active' class is present */
+.nav-item.active .active-indicator {
+    width: 50px;
+    height: 7px;
+}
+
 .nav-item.active {
     color: #ffffff;
 }

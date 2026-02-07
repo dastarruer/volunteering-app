@@ -20,7 +20,7 @@
             {% endblock content %}
         </main>
         <nav class="bottom-nav">
-            <a href="{% url 'opportunities:list' %}" class="nav-item active">
+            <a href="{% url 'opportunities:list' %}" class="nav-item {% if request.resolver_match.url_name == 'list' %}active{% endif %}">
                 <span class="icon">
                     <img width="48"
                          height="48"
@@ -28,6 +28,7 @@
                          alt="Home"
                          class="nav-svg">
                 </span>
+                <div class="active-indicator"></div>
             </a>
             <a href="#" class="nav-item">
                 <span class="icon">👤</span>
