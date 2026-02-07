@@ -33,3 +33,36 @@ main {
     -webkit-overflow-scrolling: touch;
     padding: 20px;
 }
+
+.bottom-nav {
+    position: absolute;
+    bottom: 25px; /* Distance from the bottom of the phone */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 350px;
+    background-color: #344e41;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #dad7cd; /* The light beige text color in your design */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+
+.nav-item.active {
+    color: #ffffff;
+}
+
+.icon {
+    margin-bottom: -15px;
+}
