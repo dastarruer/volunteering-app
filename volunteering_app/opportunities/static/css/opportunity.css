@@ -1,0 +1,11 @@
+.opportunity-img {
+  margin-left: -20px;
+  margin-top: -20px;
+
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+
+  border-bottom-color: #588157;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+}
