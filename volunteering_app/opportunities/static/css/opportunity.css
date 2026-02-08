@@ -1,3 +1,7 @@
+body {
+  display: block;
+}
+
 .opportunity-img {
   margin-left: -20px;
   margin-top: -20px;
@@ -8,4 +12,37 @@
   border-bottom-color: #588157;
   border-bottom-width: 5px;
   border-bottom-style: solid;
+}
+
+.title {
+  text-align: center;
+  color: #344e41;
+  font-size: 24pt;
+  margin-top: -3px;
+  width: 100%;
+}
+
+.num-volunteers {
+  font-size: 12pt;
+  color: #344e41;
+  text-align: center;
+  margin-top: -15px;
+}
+
+.distance {
+  font-size: 12pt;
+  color: #344e41;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.description {
+  font-size: 10pt;
+  color: #344e41;
+
+  text-align: left;
+  line-height: 1.4;
+
+  width: 75%;
+  margin: 20px auto;
 }
