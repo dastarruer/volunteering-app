@@ -46,3 +46,31 @@ body {
   width: 75%;
   margin: 20px auto;
 }
+
+.sign-up {
+  /* Not sure why I need to write this twice, but otherwise button will not be centered */
+  display: block;
+  margin: 25px auto;
+
+  width: 60%;
+  padding: 12px 0;
+
+  background-color: #588157;
+  color: #dad7cd;
+
+  font-size: 14pt;
+
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+
+  transition: transform 0.1s ease;
+}
+
+.sign-up:hover {
+  background-color: #3a5a40;
+}
+
+.sign-up:active {
+  transform: scale(0.96);
+}
