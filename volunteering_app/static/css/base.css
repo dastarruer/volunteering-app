@@ -34,6 +34,19 @@ main {
     padding: 20px;
 }
 
+.khula-semibold {
+  font-family: "Khula", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .bottom-nav {
     position: absolute;
     bottom: 25px; /* Distance from the bottom of the phone */

@@ -5,19 +5,6 @@ ul {
   margin: 0;
 }
 
-.khula-semibold {
-  font-family: "Khula", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.montserrat-bold {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
 .opportunity {
   display: flex; /* This puts children side-by-side */
   flex-direction: row-reverse; /* Ensures they go left-to-right */
