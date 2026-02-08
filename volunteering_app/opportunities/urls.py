@@ -5,4 +5,5 @@ app_name = "opportunities"
 
 urlpatterns = [
     path("", views.opportunities, name="list"),
+    path("<int:pk>/", views.opportunity, name="opportunity"),
 ]
