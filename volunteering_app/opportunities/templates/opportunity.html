@@ -2,6 +2,7 @@
 {% load static %}
 {% block stylesheet %}
     <link rel="stylesheet" href="{% static 'css/opportunity.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 {% endblock stylesheet %}
 {% block fonts %}
     <link href="https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap"
@@ -15,4 +16,10 @@
          width="393"
          height="300"
          class="opportunity-img">
+    <h1 class="title montserrat-bold">{{ opportunity.title }}</h1>
+    <h3 class="num-volunteers khula-semibold">
+        {{ opportunity.numSignedVolunteers }}/{{ opportunity.numTotalVolunteers }} people have signed up
+    </h3>
+    <h3 class="distance khula-semibold">{{ opportunity.distanceFromUserKilometers }}km from you</h3>
+    <p class="description khula-semibold">{{ opportunity.description }}</p>
 {% endblock content %}
