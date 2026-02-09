@@ -50,17 +50,33 @@ body {
 }
 
 .num-volunteers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: 12pt;
   color: #344e41;
   text-align: center;
   margin-top: -15px;
 }
 
+.num-volunteers img {
+  margin-top: -2px;
+}
+
 .distance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: 12pt;
   color: #344e41;
   text-align: center;
   margin-top: -20px;
+}
+
+.distance img {
+  margin-top: -2px;
 }
 
 .description {
