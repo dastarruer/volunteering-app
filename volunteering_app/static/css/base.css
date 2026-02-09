@@ -1,37 +1,37 @@
 /* Hardcoded Viewport for iPhone 15 Pro (393px x 852px) */
 html {
-    background-color: #121212; /* Dark background outside the app */
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #121212; /* Dark background outside the app */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
-    /* Hardcoded Dimensions */
-    width: 393px;
-    height: 852px;
+  /* Hardcoded Dimensions */
+  width: 393px;
+  height: 852px;
 
-    /* Screen Behavior */
-    background-color: #dad7cd;
-    overflow: hidden; /* Prevent the desktop browser from scrolling */
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  /* Screen Behavior */
+  background-color: #dad7cd;
+  overflow: hidden; /* Prevent the desktop browser from scrolling */
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
-    /* Prototype Aesthetics */
-    border-radius: 48px;
-    border: 12px solid #222; /* iPhone bezel */
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  /* Prototype Aesthetics */
+  border-radius: 48px;
+  border: 12px solid #222; /* iPhone bezel */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 /* Scrollable content area inside the hardcoded screen */
 main {
-    flex: 1;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
 }
 
 .khula-semibold {
@@ -48,51 +48,52 @@ main {
 }
 
 .bottom-nav {
-    position: absolute;
-    bottom: 25px; /* Distance from the bottom of the phone */
-    left: 50%;
-    transform: translateX(-50%);
-    height: 50px;
-    width: 350px;
-    background-color: #344e41;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    border-radius: 50px;
+  position: absolute;
+  bottom: 25px; /* Distance from the bottom of the phone */
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 350px;
+  background-color: #344e41;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .nav-item {
-    text-decoration: none;
-    color: #dad7cd; /* The light beige text color in your design */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 12px;
+  text-decoration: none;
+  color: #dad7cd; /* The light beige text color in your design */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
 }
 
 /* The underline below an active icon */
 .active-indicator {
-    width: 0;
-    height: 3px;
-    background-color: #DAD7CD; /* Matching your light beige theme */
-    border-radius: 10px;
-    position: absolute;
-    bottom: 8px; /* Position it slightly below the icon */
-    transition: width 0.3s ease; /* Smooth growing effect */
+  width: 0;
+  height: 3px;
+  background-color: #dad7cd; /* Matching your light beige theme */
+  border-radius: 10px;
+  position: absolute;
+  bottom: 8px; /* Position it slightly below the icon */
+  transition: width 0.3s ease; /* Smooth growing effect */
 }
 
 /* Only show the indicator when the 'active' class is present */
 .nav-item.active .active-indicator {
-    width: 50px;
-    height: 7px;
+  width: 50px;
+  height: 7px;
 }
 
 .nav-item.active {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .icon {
-    margin-bottom: -15px;
+  margin-bottom: -15px;
 }
