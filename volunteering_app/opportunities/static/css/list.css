@@ -30,12 +30,23 @@ ul {
 }
 
 .num-volunteers {
-  font-size: 7pt;
+  display: flex;
+  align-items: center;
+
+  font-size: 6pt;
   margin-bottom: -10px;
 }
 
+/* Align icon with text */
+.num-volunteers img {
+  margin-top: -2px;
+}
+
 .distance {
-  font-size: 7pt;
+  display: flex;
+  align-items: center;
+
+  font-size: 6pt;
 }
 
 .description {
@@ -79,7 +90,7 @@ ul {
 }
 
 .view-more:hover {
-  background-color: #B8C4A6;
+  background-color: #b8c4a6;
 }
 
 .view-more:active {
