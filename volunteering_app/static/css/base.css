@@ -49,7 +49,7 @@ main {
 
 .bottom-nav {
   position: absolute;
-  bottom: 25px; /* Distance from the bottom of the phone */
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   height: 50px;
@@ -66,22 +66,23 @@ main {
 
 .nav-item {
   text-decoration: none;
-  color: #dad7cd; /* The light beige text color in your design */
+  color: #dad7cd;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 12px;
+  cursor: pointer;
 }
 
 /* The underline below an active icon */
 .active-indicator {
   width: 0;
   height: 3px;
-  background-color: #dad7cd; /* Matching your light beige theme */
+  background-color: #dad7cd;
   border-radius: 10px;
   position: absolute;
   bottom: 8px; /* Position it slightly below the icon */
-  transition: width 0.3s ease; /* Smooth growing effect */
+  transition: width 0.3s ease;
 }
 
 /* Only show the indicator when the 'active' class is present */
