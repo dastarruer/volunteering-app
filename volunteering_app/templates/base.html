@@ -37,7 +37,7 @@
                 </span>
                 <div class="active-indicator"></div>
             </a>
-            <a href="#"
+            <a href="{% url 'users:profile' %}"
                class="nav-item {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
                 <span class="icon">
                     <img width="48"
