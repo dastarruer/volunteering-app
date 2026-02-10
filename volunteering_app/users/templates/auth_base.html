@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+              content="{% block meta_description %}Default description for my volunteering app.{% endblock meta_description %}">
+        <meta name="keywords"
+              content="volunteering, charity, community service, help, local events">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block stylesheet %}
+        {% endblock stylesheet %}
+        <title>
+            {% block title %}
+            {% endblock title %}
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        {% block fonts %}
+        {% endblock fonts %}
+    </head>
+    <body>
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+    </body>
+</html>
