@@ -1,12 +1,20 @@
 {% extends "auth_base.html" %}
+{% block fonts %}
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap"
+          rel="stylesheet">
+{% endblock fonts %}
 {% block content %}
-<div class="auth-container">
-    <h2 class="montserrat-bold">Create Account</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="sign-up montserrat-bold">Sign Up</button>
-    </form>
-    <p class="khula-semibold">Already have an account? <a href="{% url 'login' %}">Login</a></p>
-</div>
+    <div class="auth-container">
+        <h2 class="montserrat-bold">Create Account</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="sign-up montserrat-bold">Sign Up</button>
+        </form>
+        <p class="khula-semibold">
+            Already have an account? <a href="{% url 'login' %}">Login</a>
+        </p>
+    </div>
 {% endblock content %}
