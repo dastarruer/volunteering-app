@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="auth-container">
+    <h2 class="montserrat-bold">Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="sign-up montserrat-bold">Enter</button>
+    </form>
+    <p class="khula-semibold">Don't have an account? <a href="{% url 'register' %}">Sign up</a></p>
+</div>
+{% endblock content %}
