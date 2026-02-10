@@ -14,3 +14,7 @@ def register(request):
         form = MyUserCreationForm()
 
     return render(request, "registration/register.html", {"form": form})
+
+
+def profile(request):
+    return render(request, "profile.html")
