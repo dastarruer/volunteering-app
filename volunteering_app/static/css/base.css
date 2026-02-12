@@ -32,6 +32,7 @@ main {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   padding: 20px;
+  padding-bottom: 500px;
 }
 
 .khula-semibold {
