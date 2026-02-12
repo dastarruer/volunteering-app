@@ -1,17 +1,23 @@
 .flex-col {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.streak-section {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
+  align-self: center;
 }
 
 .streak {
-  margin-left: 37px;
+  align-self: center;
 }
 
 .streak-text {
   font-size: 32pt;
   color: #344e41;
+  align-self: center;
 }
