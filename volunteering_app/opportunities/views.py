@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
-from django.urls import reverse
+from django.db.models import F
 
 from .models import Opportunity
 
@@ -30,8 +30,12 @@ def opportunity(request, pk):
     if request.method == "POST":
         if is_upcoming:
             request.user.upcoming_opportunities.remove(opportunity)
+            opportunity.num_signed_volunteers = F("num_signed_volunteers") - 1
+            opportunity.save()
         elif not is_completed:
             request.user.upcoming_opportunities.add(opportunity)
+            opportunity.num_signed_volunteers = F("num_signed_volunteers") + 1
+            opportunity.save()
 
         return redirect("opportunities:opportunity", pk=pk)
 
