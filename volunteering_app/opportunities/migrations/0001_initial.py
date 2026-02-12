@@ -4,22 +4,28 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Opportunity',
+            name="Opportunity",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=200)),
-                ('description', models.CharField(max_length=1000)),
-                ('numTotalVolunteers', models.IntegerField()),
-                ('numSignedVolunteers', models.IntegerField()),
-                ('distanceFromUserKilometers', models.FloatField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=200)),
+                ("description", models.CharField(max_length=1000)),
+                ("num_total_volunteers", models.IntegerField()),
+                ("num_signed_volunteers", models.IntegerField()),
+                ("distance_from_user_km", models.FloatField()),
             ],
         ),
     ]
