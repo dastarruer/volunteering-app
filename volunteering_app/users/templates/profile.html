@@ -19,8 +19,43 @@
                  alt="Streak inactive">
             <h1 class="streak-text montserrat-bold">0 week streak</h1>
         </div>
-        <h2 class="upcoming-title montserrat-bold">
-            Upcoming Opportunities
-        </h2>
+        <h2 class="upcoming-title montserrat-bold">Upcoming Opportunities</h2>
+        <ul>
+            {% for opportunity in opportunities %}
+                <li>
+                    <div class="opportunity">
+                        <div class="opportunity-col-1">
+                            <h2 class="title montserrat-bold">{{ opportunity.title }}</h2>
+                            <h3 class="num-volunteers khula-semibold">
+                                <img width="16"
+                                     height="16"
+                                     src="{% static 'icons/volunteers-dark.svg' %}"
+                                     alt="Number of volunteers">
+                                {{ opportunity.numSignedVolunteers }}/{{ opportunity.numTotalVolunteers }} people have signed up
+                            </h3>
+                            <h3 class="distance khula-semibold">
+                                <img width="16"
+                                     height="16"
+                                     src="{% static 'icons/map-pin-dark.svg' %}"
+                                     alt="Distance from you">
+                                {{ opportunity.distanceFromUserKilometers }}km from you
+                            </h3>
+                            <p class="description khula-semibold">{{ opportunity.description }}</p>
+                        </div>
+                        <div class="opportunity-col-2">
+                            <img src="{{ opportunity.image.url }}"
+                                 alt="{{ opportunity.title }}"
+                                 width="167"
+                                 height="111"
+                                 class="opportunity-img">
+                            <a href="{% url 'opportunities:opportunity' opportunity.pk %}"
+                               class="view-more montserrat-bold">
+                                <p>View More</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock content %}
