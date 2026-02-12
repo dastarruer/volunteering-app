@@ -10,6 +10,8 @@ class User(AbstractUser):
     completed_opportunities = models.ManyToManyField(
         "opportunities.Opportunity", blank=True, related_name="completed_by"
     )
+    streak = models.IntegerField(default=0)
+    streak_last_updated = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
