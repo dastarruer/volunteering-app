@@ -1,3 +1,5 @@
+from django.utils import timezone
+
 from django.db import models
 
 
@@ -6,6 +8,7 @@ class Opportunity(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=1000)
     image = models.ImageField(upload_to="opportunities/", null=True, blank=True)
+    opportunity_date = models.DateField(default=timezone.now)
     num_total_volunteers = models.IntegerField()
     num_signed_volunteers = models.IntegerField()
 
