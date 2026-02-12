@@ -21,8 +21,8 @@ def register(request):
 @login_required
 def profile(request):
     upcoming_opportunities = request.user.upcoming_opportunities.all()
-    
+
     context = {
-        "opportunities": upcoming_opportunities,
+        "upcoming_opportunities": upcoming_opportunities,
     }
     return render(request, "profile.html", context)
