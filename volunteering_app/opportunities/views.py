@@ -17,6 +17,16 @@ def opportunities(request):
     return render(request, "list.html", {"opportunities": opportunities})
 
 
+@login_required
 def opportunity(request, pk):
     opportunity = get_object_or_404(Opportunity, pk=pk)
-    return render(request, "opportunity.html", {"opportunity": opportunity})
+
+    # Check if the user has signed up for the current opportunity
+    is_signed_up = (
+        request.user.upcoming_opportunities.filter(id=pk).exists()
+        or request.user.completed_opportunities.filter(id=pk).exists()
+    )
+
+    context = {"opportunity": opportunity, "is_signed_up": is_signed_up}
+
+    return render(request, "opportunity.html", context)
