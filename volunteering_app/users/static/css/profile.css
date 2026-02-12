@@ -1,3 +1,9 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -27,63 +33,38 @@
   color: #344e41;
 }
 
-.opportunity-img {
-  margin-left: -20px;
-  margin-top: -20px;
+.opportunity {
+  display: flex;
+  gap: 20px;
 
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
-
-  border-bottom-color: #588157;
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
+  background-color: #588157;
+  color: #dad7cd;
+  border-radius: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
 }
 
-.title {
-  text-align: center;
-  color: #344e41;
-  font-size: 24pt;
-  margin-top: -3px;
-  width: 100%;
+.opportunity-details {
+  display: flex;
 }
 
 .num-volunteers {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 12pt;
-  color: #344e41;
-  text-align: center;
-  margin-top: -15px;
-}
-
-.num-volunteers img {
-  margin-top: -2px;
+  font-size: 10pt;
+  padding-left: 7px;
 }
 
 .distance {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 12pt;
-  color: #344e41;
-  text-align: center;
-  margin-top: -20px;
-}
-
-.distance img {
-  margin-top: -2px;
-}
-
-.description {
   font-size: 10pt;
-  color: #344e41;
+  padding-left: 7px;
+}
 
-  text-align: left;
-  line-height: 1.4;
+.title {
+  margin-top: -15px;
+  margin-left: 10px;
+}
 
-  width: 75%;
-  margin: 20px auto;
+.opportunity-img {
+  border-radius: 10px;
+  border: 5px solid #588157;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
