@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from .forms import MyUserCreationForm
+from .models import User
+from django.contrib.auth.decorators import login_required
 
 
 def register(request):
@@ -16,5 +18,11 @@ def register(request):
     return render(request, "registration/register.html", {"form": form})
 
 
+@login_required
 def profile(request):
-    return render(request, "profile.html")
+    upcoming_opportunities = request.user.upcoming_opportunities.all()
+    
+    context = {
+        "opportunities": upcoming_opportunities,
+    }
+    return render(request, "profile.html", context)
