@@ -9,6 +9,8 @@ ul {
   flex-direction: column;
   width: 100%;
   align-items: flex-start;
+  /* Allow user to scroll farther down */
+  padding-bottom: 500px;
 }
 
 .streak-section {
