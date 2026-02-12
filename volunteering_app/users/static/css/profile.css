@@ -59,6 +59,11 @@ ul {
   padding-left: 7px;
 }
 
+.completion-date {
+  font-size: 10pt;
+  padding-left: 7px;
+}
+
 .title {
   margin-top: -15px;
   margin-left: 10px;
