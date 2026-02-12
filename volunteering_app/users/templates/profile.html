@@ -31,14 +31,14 @@
                                          height="16"
                                          src="{% static 'icons/volunteers-dark.svg' %}"
                                          alt="Number of volunteers">
-                                    {{ opportunity.numSignedVolunteers }}/{{ opportunity.numTotalVolunteers }}
+                                    {{ opportunity.num_signed_volunteers }}/{{ opportunity.num_total_volunteers }}
                                 </h3>
                                 <h3 class="distance khula-semibold">
                                     <img width="16"
                                          height="16"
                                          src="{% static 'icons/map-pin-dark.svg' %}"
                                          alt="Distance from you">
-                                    {{ opportunity.distanceFromUserKilometers }}km
+                                    {{ opportunity.distance_from_user_km }}km
                                 </h3>
                             </div>
                             <h2 class="title montserrat-bold">{{ opportunity.title }}</h2>
