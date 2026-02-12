@@ -38,5 +38,11 @@
         {{ opportunity.distance_from_user_km }}km from you
     </h3>
     <p class="description khula-semibold">{{ opportunity.description }}</p>
-    <button class="sign-up montserrat-bold">Sign Up</button>
+    <button class="{% if is_signed_up %}signed-up{% else %}sign-up{% endif %} montserrat-bold">
+        {% if is_signed_up %}
+            Registered
+        {% else %}
+            Sign Up
+        {% endif %}
+    </button>
 {% endblock content %}
