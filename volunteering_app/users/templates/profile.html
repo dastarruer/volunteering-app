@@ -23,7 +23,8 @@
         <ul>
             {% for opportunity in upcoming_opportunities %}
                 <li>
-                    <div class="opportunity">
+                    <a href="{% url 'opportunities:opportunity' opportunity.pk %}"
+                       class="opportunity">
                         <div class="opportunity-col-1">
                             <div class="opportunity-details">
                                 <h3 class="num-volunteers khula-semibold">
@@ -50,7 +51,7 @@
                                  height="68"
                                  class="opportunity-img">
                         </div>
-                    </div>
+                    </a>
                 </li>
             {% endfor %}
         </ul>
@@ -58,7 +59,8 @@
         <ul>
             {% for opportunity in completed_opportunities %}
                 <li>
-                    <div class="opportunity">
+                    <a href="{% url 'opportunities:opportunity' opportunity.pk %}"
+                       class="opportunity">
                         <div class="opportunity-col-1">
                             <div class="opportunity-details">
                                 <h3 class="completion-date khula-semibold">
@@ -78,7 +80,7 @@
                                  height="68"
                                  class="opportunity-img">
                         </div>
-                    </div>
+                    </a>
                 </li>
             {% endfor %}
         </ul>

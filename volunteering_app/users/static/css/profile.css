@@ -37,6 +37,7 @@ ul {
 
 .opportunity {
   display: flex;
+  text-decoration: none;
   align-items: center;
   gap: 20px;
 
