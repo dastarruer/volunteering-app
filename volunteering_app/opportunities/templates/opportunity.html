@@ -11,12 +11,12 @@
           rel="stylesheet">
 {% endblock fonts %}
 {% block content %}
-    <a href="{% url 'opportunities:list' %}" class="back-btn">
+    <button onclick="window.history.back()" class="back-btn">
         <img width="24"
              height="24"
              src="{% static 'icons/back-arrow.svg' %}"
              alt="Back">
-    </a>
+    </button>
     <img src="{{ opportunity.image.url }}"
          alt="{{ opportunity.title }}"
          width="393"
