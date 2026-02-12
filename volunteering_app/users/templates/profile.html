@@ -25,33 +25,30 @@
                 <li>
                     <div class="opportunity">
                         <div class="opportunity-col-1">
+                            <div class="opportunity-details">
+                                <h3 class="num-volunteers khula-semibold">
+                                    <img width="16"
+                                         height="16"
+                                         src="{% static 'icons/volunteers-dark.svg' %}"
+                                         alt="Number of volunteers">
+                                    {{ opportunity.numSignedVolunteers }}/{{ opportunity.numTotalVolunteers }}
+                                </h3>
+                                <h3 class="distance khula-semibold">
+                                    <img width="16"
+                                         height="16"
+                                         src="{% static 'icons/map-pin-dark.svg' %}"
+                                         alt="Distance from you">
+                                    {{ opportunity.distanceFromUserKilometers }}km
+                                </h3>
+                            </div>
                             <h2 class="title montserrat-bold">{{ opportunity.title }}</h2>
-                            <h3 class="num-volunteers khula-semibold">
-                                <img width="16"
-                                     height="16"
-                                     src="{% static 'icons/volunteers-dark.svg' %}"
-                                     alt="Number of volunteers">
-                                {{ opportunity.numSignedVolunteers }}/{{ opportunity.numTotalVolunteers }} people have signed up
-                            </h3>
-                            <h3 class="distance khula-semibold">
-                                <img width="16"
-                                     height="16"
-                                     src="{% static 'icons/map-pin-dark.svg' %}"
-                                     alt="Distance from you">
-                                {{ opportunity.distanceFromUserKilometers }}km from you
-                            </h3>
-                            <p class="description khula-semibold">{{ opportunity.description }}</p>
                         </div>
                         <div class="opportunity-col-2">
                             <img src="{{ opportunity.image.url }}"
                                  alt="{{ opportunity.title }}"
-                                 width="167"
-                                 height="111"
+                                 width="103"
+                                 height="68"
                                  class="opportunity-img">
-                            <a href="{% url 'opportunities:opportunity' opportunity.pk %}"
-                               class="view-more montserrat-bold">
-                                <p>View More</p>
-                            </a>
                         </div>
                     </div>
                 </li>
