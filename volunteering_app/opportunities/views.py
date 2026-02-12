@@ -1,5 +1,6 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 
 from .models import Opportunity
 
@@ -20,12 +21,19 @@ def opportunities(request):
 @login_required
 def opportunity(request, pk):
     opportunity = get_object_or_404(Opportunity, pk=pk)
+    is_upcoming = request.user.upcoming_opportunities.filter(id=pk).exists()  #
+    is_completed = request.user.completed_opportunities.filter(id=pk).exists()
 
     # Check if the user has signed up for the current opportunity
-    is_signed_up = (
-        request.user.upcoming_opportunities.filter(id=pk).exists()
-        or request.user.completed_opportunities.filter(id=pk).exists()
-    )
+    is_signed_up = is_upcoming or is_completed
+
+    if request.method == "POST":
+        if is_upcoming:
+            request.user.upcoming_opportunities.remove(opportunity)
+        elif not is_completed:
+            request.user.upcoming_opportunities.add(opportunity)
+
+        return redirect("opportunities:opportunity", pk=pk)
 
     context = {"opportunity": opportunity, "is_signed_up": is_signed_up}
 
