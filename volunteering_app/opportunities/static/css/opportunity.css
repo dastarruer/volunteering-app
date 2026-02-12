@@ -19,6 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .back-btn:hover {
