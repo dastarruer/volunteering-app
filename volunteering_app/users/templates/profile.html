@@ -54,5 +54,33 @@
                 </li>
             {% endfor %}
         </ul>
+        <h2 class="completed-title montserrat-bold">Upcoming Opportunities</h2>
+        <ul>
+            {% for opportunity in completed_opportunities %}
+                <li>
+                    <div class="opportunity">
+                        <div class="opportunity-col-1">
+                            <div class="opportunity-details">
+                                <h3 class="completion-date khula-semibold">
+                                    <img width="16"
+                                         height="16"
+                                         src="{% static 'icons/volunteers-dark.svg' %}"
+                                         alt="Completion date">
+                                    Completed on {{ opportunity.opportunity_date }}
+                                </h3>
+                            </div>
+                            <h2 class="title montserrat-bold">{{ opportunity.title }}</h2>
+                        </div>
+                        <div class="opportunity-col-2">
+                            <img src="{{ opportunity.image.url }}"
+                                 alt="{{ opportunity.title }}"
+                                 width="103"
+                                 height="68"
+                                 class="opportunity-img">
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock content %}
