@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block stylesheet %}
-    <link rel="stylesheet" href="{% static 'css/list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
 {% endblock stylesheet %}
 {% block fonts %}
     <link href="https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap"
@@ -10,5 +10,14 @@
           rel="stylesheet">
 {% endblock fonts %}
 {% block content %}
-hello
+    <div class="flex-col">
+        <div class="streak-section">
+            <img width="200"
+                 height="200"
+                 class="streak"
+                 src="{% static 'icons/streak-inactive.svg' %}"
+                 alt="Streak inactive">
+            <h1 class="streak-text montserrat-bold">0 week streak</h1>
+        </div>
+    </div>
 {% endblock content %}
