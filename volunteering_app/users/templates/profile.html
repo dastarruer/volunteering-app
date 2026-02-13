@@ -15,9 +15,9 @@
             <img width="200"
                  height="200"
                  class="streak"
-                 src="{% static 'icons/streak-inactive.svg' %}"
-                 alt="Streak inactive">
-            <h1 class="streak-text montserrat-bold">0 week streak</h1>
+                 src="{% if streak > 0 %}{% static 'icons/streak-active.svg' %}{% else %}{% static 'icons/streak-inactive.svg' %}{% endif %}"
+                 alt="{% if streak > 0 %}Streak active{% else %}Streak inactive{% endif %}">
+            <h1 class="streak-text montserrat-bold">{{ streak }} week streak</h1>
         </div>
         <h2 class="title montserrat-bold">Upcoming Opportunities</h2>
         <ul>
