@@ -33,23 +33,23 @@ Then, go to http://localhost:8000/admin in your browser of choice.
 
 ### Register/Login Screens
 
-![alt text](docs/assets/image.png)
-![alt text](docs/assets/image-2.png)
+![Registration screen](docs/assets/auth/registration.png)
+![Login screen](docs/assets/auth/login.png)
 
 ### Homepage Screen
 
-![alt text](docs/assets/image-1.png)
-![alt text](docs/assets/image-3.png)
-![alt text](docs/assets/image-4.png)
+![Homepage 1](docs/assets/homepage/1.png)
+![Homepage 2](docs/assets/homepage/2.png)
+![Homepage 3](docs/assets/homepage/3.png)
 
 ### Opportunity Screens
 
-![alt text](docs/assets/image-5.png)
-![alt text](docs/assets/image-6.png)
-![alt text](docs/assets/image-7.png)
-![alt text](docs/assets/image-8.png)
+![Opportunity 1](docs/assets/opportunity/1.png)
+![Opportunity 2](docs/assets/opportunity/2.png)
+![Opportunity 3](docs/assets/opportunity/3.png)
+![Opportunity 4](docs/assets/opportunity/4.png)
 
 ### Profile Screens
 
-![alt text](docs/assets/image-9.png)
-![alt text](docs/assets/image-10.png)
+![Profile 1](docs/assets/profile/1.png)
+![Profile 2](docs/assets/profile/2.png)
