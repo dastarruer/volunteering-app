@@ -2,7 +2,7 @@
 
 A prototype of an app written in Django that allows you to sign up for charity opportunities. Or, rather, a website that looks like a mobile app. I didn't have the time to make a real mobile app, sadly...
 
-This is my first Django project, so please be nice...
+This is my first Django project, so please direct any criticism to my private email address:
 
 ## Features
 
