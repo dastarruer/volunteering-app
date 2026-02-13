@@ -27,7 +27,7 @@ To get access to the admin panel (where you can add your own opportunities, play
 docker compose exec web python manage.py createsuperuser
 ```
 
-Then, go to http://localhost:8000/admin in your browser of choice.
+Then, go to http://localhost:8000/admin in your browser of choice. Sign in with the same details that you used to create the superuser.
 
 ## Images
 
