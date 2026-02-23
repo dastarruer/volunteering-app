@@ -33,7 +33,7 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./volunteering_app
+          path: ./app
           target: /app
           initial_sync: true
     depends_on:
