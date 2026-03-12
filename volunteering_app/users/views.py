@@ -5,18 +5,18 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.utils import timezone
 
-from .forms import MyUserCreationForm
+from .forms import CustomUserCreationForm
 
 
 def register(request):
     if request.method == "POST":
-        form = MyUserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
             return redirect("opportunities:list")
     else:
-        form = MyUserCreationForm()
+        form = CustomUserCreationForm()
 
     return render(request, "registration/register.html", {"form": form})
 
